@@ -7,8 +7,8 @@ app.use(express.static('public'));
 
 // import the dataset to be used here
 const garments = require('./garments.json');
-const PORT = 4017;
-app.listen(process.env.PORT, () => console.log('Example app listening at http://localhost:${PORT}'));
+const PORT = process.env.PORT || 4017;
+app.listen(PORT, () => console.log('App started on port ${PORT}'));
 
 // API routes to be added here
 
